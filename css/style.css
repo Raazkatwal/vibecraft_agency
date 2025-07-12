@@ -28,12 +28,12 @@
   color: white;
 }
 
-body>* {
+body > * {
   padding: 1.5rem 5rem;
 }
 
 main {
-  background-image: url("/img/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 110vh;
@@ -75,11 +75,13 @@ nav {
 }
 
 .logo {
-  background: linear-gradient(0deg,
-  var(--color-primary-light) 0.5%,
-  var(--color-accent-1) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    0deg,
+    var(--color-primary-light) 0.5%,
+    var(--color-accent-1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.5ch;
 }
@@ -112,14 +114,16 @@ nav {
 }
 
 .social-links i {
-  background: linear-gradient(0deg,
-      rgb(245, 74, 72) 0.5%,
-      rgb(250, 152, 47) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(245, 74, 72) 0.5%,
+    rgb(250, 152, 47) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hero-content{
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,17 +131,17 @@ nav {
   text-transform: uppercase;
 }
 
-.hero-content h1{
+.hero-content h1 {
   font-size: 8rem;
 }
-.hero-content p{
+.hero-content p {
   font-size: 3rem;
 }
-.hero-btns{
+.hero-btns {
   display: flex;
   gap: 1rem;
 }
-.hero-btns button{
+.hero-btns button {
   cursor: pointer;
   padding: 1.5rem 4rem;
   border-radius: 5rem;
@@ -147,6 +151,10 @@ nav {
   color: white;
   font-weight: 900;
 }
-.hero-btns button:first-child{
-  background: linear-gradient(45deg, var(--color-accent-1), var(--color-accent-2));
+.hero-btns button:first-child {
+  background: linear-gradient(
+    45deg,
+    var(--color-accent-1),
+    var(--color-accent-2)
+  );
 }
