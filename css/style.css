@@ -41,13 +41,17 @@ main {
 }
 
 nav {
-  position: sticky;
-  top: 1rem;
-  background: transparent;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(1rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
   z-index: 99;
+  width: 93%;
+  transition: all 0.3s ease;
 }
 
 .nav-contents {
+  width: 100%;
   font-size: 4rem;
   display: flex;
   justify-content: space-between;
@@ -87,7 +91,7 @@ nav {
 
 .hero {
   display: flex;
-  height: 80vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
@@ -104,7 +108,9 @@ nav {
   color: var(--color-accent-2);
 }
 
-.social-links::after {
+.social-links::after,
+.clients-section::before,
+.clients-section::after {
   content: "";
   width: 0.2rem;
   height: 15rem;
@@ -166,7 +172,6 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  /* flex-wrap: wrap; */
   transform: translateY(-40%);
 }
 
@@ -198,10 +203,6 @@ nav {
 
 .card-icon {
   font-size: 4rem;
-  /* background: linear-gradient(0deg,
-      rgb(245, 74, 72) 0.5%,
-      rgb(250, 152, 47) 100%); */
-
   background: linear-gradient(0deg,
       var(--color-accent-1) 0.5%,
       var(--color-accent-2) 100%);
@@ -212,4 +213,33 @@ nav {
 .card-section .card:hover {
   transform: translateY(-5%) scale(1.03);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.clients-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  transform: translateY(-10%);
+}
+
+.clients-section::before,
+.clients-section::after {
+  height: 8rem;
+}
+
+.clients-heading {
+  font-size: 2.5rem;
+  letter-spacing: .5ch;
+  text-transform: uppercase;
+}
+
+.clients-logo {
+  display: flex;
+  gap: 8rem;
+}
+
+.clients-logo img {
+  width: 17rem;
 }
