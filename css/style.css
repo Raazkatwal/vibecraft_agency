@@ -253,7 +253,7 @@ main {
 }
 
 footer {
-  background: linear-gradient(#1a0a23 10%, #3f1030 90%);
+  background: linear-gradient(var(--color-primary-dark) 10%, var(--color-primary-base) 90%);
   color: var(--color-gray);
   display: flex;
   flex-direction: column;
@@ -361,4 +361,55 @@ footer {
   padding: 1rem 0;
   font-size: 1.5rem;
   color: var(--color-gray-light);
+}
+
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 10rem 0;
+}
+
+.newsletter-heading {
+  font-size: 3rem;
+  letter-spacing: .25ch;
+}
+
+.newsletter-text {
+  font-size: 1.7rem;
+  text-align: center;
+  max-width: 50vw;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem;
+  border-radius: 10rem;
+  background-color: var(--color-primary-base);
+  border: thin solid var(--color-accent-2);
+  width: 70%;
+  height: 5rem;
+}
+
+.newsletter-form input[type='email'] {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  color: white;
+  width: 100%;
+  padding: 0 0 0 3rem;
+}
+
+.newsletter-form button {
+  width: 20rem;
+  letter-spacing: .2ch;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  background: linear-gradient(35deg, var(--color-accent-1), var(--color-accent-2));
 }
