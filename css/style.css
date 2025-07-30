@@ -40,7 +40,7 @@ main {
   position: relative;
 }
 
-nav {
+#navbar {
   position: fixed;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(1rem);
@@ -85,6 +85,9 @@ nav {
       var(--color-accent-1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.uppercase {
   text-transform: uppercase;
   letter-spacing: 0.5ch;
 }
@@ -118,7 +121,7 @@ nav {
   position: relative;
 }
 
-.social-links i {
+.icon {
   background: linear-gradient(0deg,
       rgb(245, 74, 72) 0.5%,
       rgb(250, 152, 47) 100%);
@@ -242,4 +245,120 @@ nav {
 
 .clients-logo img {
   width: 17rem;
+}
+
+.about-us-section {
+  display: grid;
+
+}
+
+footer {
+  background: linear-gradient(#1a0a23 10%, #3f1030 90%);
+  color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 2rem;
+}
+
+.footer-content {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  justify-content: space-between;
+  padding: 2rem 5rem 0 5rem;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2.5rem;
+  color: var(--color-gray-light);
+}
+
+.footer-logo-section .logo {
+  font-size: 2.5rem;
+}
+
+.footer-logo-section .copyright {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-gray-light);
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-social-links i {
+  font-size: 2.5rem;
+}
+
+.footer-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-heading {
+  font-size: 2.5rem;
+  letter-spacing: .2ch;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.footer-links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  color: var(--color-gray);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent-1);
+}
+
+.footer-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-info div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.footer-info i {
+  font-size: 1.8rem;
+}
+
+.copyright,
+.copyright span,
+.copyright a {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-primary-base);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--color-gray-light);
 }
