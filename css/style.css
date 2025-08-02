@@ -179,7 +179,7 @@ main {
   transform: translateY(-40%);
 }
 
-.card-section .card {
+.card {
   background: linear-gradient(to top, var(--color-primary-base), var(--color-primary-dark));
   width: 25rem;
   padding: 2rem 4rem;
@@ -214,7 +214,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-.card-section .card:hover {
+.card:hover {
   transform: translateY(-5%) scale(1.03);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -365,6 +365,7 @@ footer {
 }
 
 .newsletter-section {
+  margin: 20rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -414,16 +415,73 @@ footer {
   background: linear-gradient(35deg, var(--color-accent-1), var(--color-accent-2));
 }
 
-.expertise-section {
+.expertise-section,
+.services-section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin: 4rem 0;
 }
 
+.services-section {
+  background-color: var(--color-primary-base);
+  background: linear-gradient(to bottom,
+      var(--color-primary-dark) 0%,
+      var(--color-primary-base) 50%,
+      var(--color-primary-dark) 100%);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.services-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  place-items: center;
+  padding: 0 6rem;
+  gap: 5rem;
+  text-align: center;
+}
+
+.services-grid .card {
+  height: 40rem;
+}
+
+.service-grid-icon {
+  background: linear-gradient(0deg,
+      var(--color-accent-1) 0.5%,
+      var(--color-accent-2) 100%);
+  width: 8rem;
+  height: 8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+  font-size: 5rem;
+  align-self: center;
+}
+
+  {
+  background: linear-gradient(to top, var(--color-primary-base), var(--color-primary-dark));
+  width: 25rem;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+  transition: all ease-in-out 400ms;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-grid-item:hover {
+  transform: translateY(-5%) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
 .expertise-top {
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
+  border-bottom: thin solid var(--color-accent-1);
 }
 
 .expertise-experience {
