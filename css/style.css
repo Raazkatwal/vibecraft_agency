@@ -577,17 +577,59 @@ footer {
   align-items: center;
 }
 
-.expertise-image {
+.expertise-image,
+.about-image {
   width: 50rem;
   height: 50rem;
   border-radius: 100%;
   border: .7rem solid var(--color-primary-light);
-  background-image: url("../img/experience.png");
   background-position: 0 0;
   transition: all 0.3s ease-in-out;
 }
 
-.expertise-image:hover {
+.expertise-image {
+  background-image: url("../img/experience.png");
+}
+
+.about-image {
+  background-position: 100% 0;
+  background-image: url("../img/about.png");
+  position: relative;
+}
+
+.about-badge {
+  position: absolute;
+  bottom: 0;
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(0deg,
+      var(--color-accent-1) 30%,
+      var(--color-accent-2) 100%);
+  display: grid;
+  place-items: center;
+  font-size: 2.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  animation: experience infinite 3s alternate-reverse;
+}
+
+@keyframes experience {
+  0% {
+    border-radius: 42% 58% 70% 30% / 30% 40% 60% 70%;
+  }
+
+  50% {
+    border-radius: 100%;
+  }
+
+  100% {
+    border-radius: 42% 58% 70% 30% / 30% 40% 60% 70%;
+  }
+}
+
+.expertise-image:hover,
+.about-image:hover {
   transform: scale(1.05);
 }
 
