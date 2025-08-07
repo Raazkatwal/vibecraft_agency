@@ -10,3 +10,19 @@ fetch('./components/footer.html')
         document.getElementById('footer').innerHTML = html;
         document.getElementById('date').textContent = new Date().getFullYear();
     });
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        scrollTopBtn.classList.add("show");
+    } else {
+        scrollTopBtn.classList.remove("show");
+    }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+    });
+});
